@@ -1,12 +1,12 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 
-type BearStateNew = {
+type BearState = {
     bears: number;
     increase: (by: number) => void;
 }
 
-export const useBearStore = create<BearStateNew>()(
+export const useBearStore = create<BearState>()(
     devtools(
         (set) => ({
             bears: 0,
